@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Escudería | AT33 STEM Racing</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;600;700&family=Barlow+Condensed:ital,wght@0,300;0,700;0,900;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <nav id="navbar">
+      <a href="index.html" class="logo">
+        <img
+          src="img/Logo.png"
+          alt="AT33 Logo"
+          style="
+            height: 38px;
+            width: 38px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 24, 1, 0.4);
+          "
+        />
+        AT33<span class="logo-badge">ESCUDERÍA</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-text="INICIO">INICIO</a></li>
+        <li>
+          <a href="escuderia.html" class="active" data-text="ESCUDERÍA"
+            >ESCUDERÍA</a
+          >
+        </li>
+        <li><a href="ingenieria.html" data-text="INGENIERÍA">INGENIERÍA</a></li>
+        <li><a href="patrocinio.html" data-text="PATROCINIO">PATROCINIO</a></li>
+      </ul>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div
+        class="page-header-bg"
+        style="background-image: url(&quot;img/Image 1.jpeg&quot;)"
+      ></div>
+      <div class="page-header-overlay"></div>
+      <div class="page-header-grid"></div>
+      <div class="page-header-content">
+        <p class="section-label" style="animation: fadeUp 0.6s 0.2s both">
+          ESCUDERÍA AT33
+        </p>
+        <h1
+          class="page-header-title glitch"
+          data-text="NUESTRA HISTORIA"
+          style="animation: fadeUp 0.8s 0.4s both"
+        >
+          NUESTRA <span style="color: var(--primary)">HISTORIA</span>
+        </h1>
+        <p class="page-header-desc" style="animation: fadeUp 0.8s 0.6s both">
+          Un equipo de jóvenes ingenieros que ha decidido aprender haciendo.
+          Diseñando. Compitiendo. Ganando.
+        </p>
+      </div>
+    </div>
+
+    <!-- TICKER -->
+    <div class="ticker-wrap">
+      <div class="ticker-inner">
+        <span class="ticker-item">PASIÓN POR LA F1</span>
+        <span class="ticker-item">TALENTO JOVEN</span>
+        <span class="ticker-item">STEM RACING</span>
+        <span class="ticker-item">JARAMA 2024</span>
+        <span class="ticker-item">ESTUDIO ROY</span>
+        <span class="ticker-item">INNOVACIÓN</span>
+        <span class="ticker-item">PASIÓN POR LA F1</span>
+        <span class="ticker-item">TALENTO JOVEN</span>
+        <span class="ticker-item">STEM RACING</span>
+        <span class="ticker-item">JARAMA 2024</span>
+        <span class="ticker-item">ESTUDIO ROY</span>
+        <span class="ticker-item">INNOVACIÓN</span>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section style="padding: 100px 7%">
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1.2fr 0.8fr;
+          gap: 70px;
+          align-items: center;
+        "
+      >
+        <div>
+          <p class="section-label reveal">QUIÉNES SOMOS</p>
+          <h2
+            class="reveal"
+            style="
+              font-size: clamp(1.8rem, 3vw, 2.8rem);
+              line-height: 1.1;
+              margin-bottom: 30px;
+            "
+          >
+            MÁS QUE UN EQUIPO.<br /><span style="color: var(--primary)"
+              >UNA FAMILIA.</span
+            >
+          </h2>
+          <p
+            class="reveal"
+            style="
+              color: rgba(255, 255, 255, 0.75);
+              line-height: 1.9;
+              margin-bottom: 20px;
+              font-size: 1.05rem;
+            "
+          >
+            Somos un grupo de estudiantes de
+            <strong style="color: #fff">4º de ESO a Bachillerato</strong> unidos
+            por un objetivo común: competir al más alto nivel en el
+            <strong style="color: #fff">STEM Racing – Formula 1®</strong>.
+          </p>
+          <p
+            class="reveal"
+            style="
+              color: rgba(255, 255, 255, 0.75);
+              line-height: 1.9;
+              margin-bottom: 20px;
+              font-size: 1.05rem;
+            "
+          >
+            Combinamos creatividad, tecnología y trabajo en equipo para diseñar
+            y construir nuestro propio monoplaza a escala. Nuestra meta
+            inmediata es el Circuito del Jarama, pero nuestra visión va mucho
+            más allá: queremos revolucionar la forma en la que la ingeniería se
+            enseña en las aulas españolas.
+          </p>
+          <p
+            class="reveal"
+            style="
+              color: rgba(255, 255, 255, 0.75);
+              line-height: 1.9;
+              margin-bottom: 35px;
+              font-size: 1.05rem;
+            "
+          >
+            No somos un club extraescolar. Somos un equipo de alto rendimiento
+            donde cada decision importa, cada hora de trabajo cuenta y cada
+            fracaso es datos valiosos para la siguiente iteración.
+          </p>
+          <div
+            class="reveal"
+            style="
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 15px;
+            "
+          >
+            <div
+              class="glass-card"
+              style="padding: 20px 25px; text-align: center"
+            >
+              <div class="stat-number" style="font-size: 2.5rem">28–29</div>
+              <div class="stat-label">ABRIL · JARAMA</div>
+            </div>
+            <div
+              class="glass-card"
+              style="padding: 20px 25px; text-align: center"
+            >
+              <div
+                class="stat-number"
+                style="font-size: 2.5rem; color: var(--accent)"
+              >
+                ROY
+              </div>
+              <div class="stat-label">ESTUDIO INNOVACIÓN</div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal-right" style="position: relative">
+          <div
+            style="
+              position: absolute;
+              inset: -15px;
+              border: 1px solid rgba(255, 24, 1, 0.1);
+              pointer-events: none;
+            "
+          ></div>
+          <img
+            src="img/Image 2.jpeg"
+            alt="Trabajo en Boxes"
+            style="
+              width: 100%;
+              display: block;
+              position: relative;
+              z-index: 1;
+              filter: contrast(1.05);
+            "
+          />
+          <div
+            style="
+              position: absolute;
+              top: 20px;
+              right: 20px;
+              z-index: 2;
+              background: var(--primary);
+              padding: 8px 16px;
+            "
+          >
+            <p
+              style="
+                font-size: 0.6rem;
+                letter-spacing: 3px;
+                font-family: &quot;Orbitron&quot;, sans-serif;
+                font-weight: 700;
+              "
+            >
+              EN PISTA
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section style="padding: 0 7% 100px">
+      <div class="section-divider">
+        <h2 class="reveal">
+          NUESTROS <span class="divider-accent">VALORES</span>
+        </h2>
+        <div class="divider-line"></div>
+      </div>
+      <div
+        style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px"
+      >
+        <div class="feature-item reveal delay-1" style="padding: 40px 30px">
+          <span class="feature-number">A</span>
+          <p class="feature-title" style="margin-top: 60px">AMBICIÓN</p>
+          <p class="feature-desc">
+            No llegamos al Jarama a participar. Llegamos a ganar. La ambición es
+            el combustible que nos mueve.
+          </p>
+        </div>
+        <div class="feature-item reveal delay-2" style="padding: 40px 30px">
+          <span class="feature-number">T</span>
+          <p class="feature-title" style="margin-top: 60px">TRABAJO</p>
+          <p class="feature-desc">
+            Horas de diseño, pruebas y ajustes. La victoria se construye en el
+            taller mucho antes que en la pista.
+          </p>
+        </div>
+        <div class="feature-item reveal delay-3" style="padding: 40px 30px">
+          <span class="feature-number">3</span>
+          <p class="feature-title" style="margin-top: 60px">TRES PILARES</p>
+          <p class="feature-desc">
+            Ciencia, tecnología e ingeniería como base. La creatividad como
+            diferenciador. La pasión como motor.
+          </p>
+        </div>
+        <div class="feature-item reveal delay-4" style="padding: 40px 30px">
+          <span class="feature-number">3</span>
+          <p class="feature-title" style="margin-top: 60px">TERCERA VÍA</p>
+          <p class="feature-desc">
+            Más que aprender ingeniería: vivir la ingeniería. Un modelo
+            educativo que pone la experiencia primero.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEDIA -->
+    <section style="padding: 100px 7%; background: var(--gray)">
+      <div class="section-divider">
+        <h2 class="reveal">
+          RECONOCIDOS POR LOS <span class="divider-accent">MEDIOS</span>
+        </h2>
+        <div class="divider-line"></div>
+      </div>
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2px;
+          margin-bottom: 60px;
+        "
+      >
+        <div class="media-card reveal delay-1">
+          <div class="media-name">TVE</div>
+          <p
+            style="
+              font-size: 0.7rem;
+              letter-spacing: 3px;
+              color: var(--text-muted);
+              font-family: &quot;Orbitron&quot;, sans-serif;
+              margin-bottom: 15px;
+            "
+          >
+            TELEVISIÓN NACIONAL
+          </p>
+          <p class="media-desc">
+            Nuestros programas de robótica e innovación educativa han sido
+            difundidos por la televisión pública nacional. Un reconocimiento que
+            demuestra que lo que hacemos va más allá de una competición escolar.
+          </p>
+        </div>
+        <div
+          class="media-card reveal delay-2"
+          style="border-color: rgba(255, 24, 1, 0.25)"
+        >
+          <div class="media-name">EL ESPAÑOL</div>
+          <p
+            style="
+              font-size: 0.7rem;
+              letter-spacing: 3px;
+              color: var(--text-muted);
+              font-family: &quot;Orbitron&quot;, sans-serif;
+              margin-bottom: 15px;
+            "
+          >
+            PRENSA DIGITAL
+          </p>
+          <p class="media-desc">
+            Reportajes en profundidad sobre el talento joven español y la
+            ingeniería aplicada. AT33 STEM Racing es un ejemplo de cómo los
+            estudiantes pueden liderar la innovación tecnológica desde las
+            aulas.
+          </p>
+        </div>
+        <div class="media-card reveal delay-3">
+          <div class="media-name">F1®</div>
+          <p
+            style="
+              font-size: 0.7rem;
+              letter-spacing: 3px;
+              color: var(--text-muted);
+              font-family: &quot;Orbitron&quot;, sans-serif;
+              margin-bottom: 15px;
+            "
+          >
+            PROGRAMA OFICIAL
+          </p>
+          <p class="media-desc">
+            Orgullosos de formar parte del programa oficial
+            <strong style="color: #fff">STEM Racing – Formula 1®</strong>, la
+            iniciativa internacional que conecta el mundo del automovilismo de
+            élite con la educación STEM de vanguardia.
+          </p>
+        </div>
+      </div>
+
+      <div class="quote-block reveal-scale">
+        <p class="quote-text">
+          "Cuando una televisión nacional viene a filmarte en el taller, te das
+          cuenta de que lo que haces importa de verdad."
+        </p>
+        <p class="quote-author">— EQUIPO AT33</p>
+      </div>
+    </section>
+
+    <!-- GALLERY: VIDA EN EL PADDOCK -->
+    <section style="padding: 100px 7%">
+      <div class="section-divider">
+        <h2 class="reveal">
+          VIDA EN EL <span class="divider-accent">PADDOCK</span>
+        </h2>
+        <div class="divider-line"></div>
+      </div>
+      <p
+        class="reveal"
+        style="
+          color: var(--text-muted);
+          max-width: 600px;
+          margin-bottom: 40px;
+          line-height: 1.8;
+        "
+      >
+        Cada jornada en el taller es una experiencia única. Estos son algunos
+        momentos del proceso: el diseño, la construcción, las pruebas y la
+        emoción que solo se puede vivir en el paddock.
+      </p>
+
+      <div class="gallery-grid">
+        <div class="gal-item gal-large reveal">
+          <video
+            src="video/Video 10.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+        </div>
+        <div class="gal-item reveal delay-1">
+          <img src="img/Image 5.jpeg" alt="Detalle mecánico" />
+        </div>
+        <div class="gal-item reveal delay-2">
+          <video
+            src="video/Video 6.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+        </div>
+        <div class="gal-item reveal delay-2">
+          <img src="img/Image 7.jpeg" alt="Aerodinámica" />
+        </div>
+        <div class="gal-item reveal delay-3">
+          <video
+            src="video/Video 1.mp4"
+            muted
+            loop
+            onmouseover="this.play()"
+            onmouseleave="
+              this.pause();
+              this.currentTime = 0;
+            "
+          ></video>
+        </div>
+        <div
+          class="gal-item reveal delay-1"
+          style="
+            background: var(--gray2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            text-align: center;
+          "
+        >
+          <p
+            style="
+              font-size: 0.65rem;
+              letter-spacing: 4px;
+              color: var(--primary);
+              font-family: &quot;Orbitron&quot;, sans-serif;
+              margin-bottom: 15px;
+            "
+          >
+            PRÓXIMA CITA
+          </p>
+          <div class="stat-number" style="font-size: 5rem; line-height: 1">
+            28<br />ABR
+          </div>
+          <p
+            style="
+              color: var(--text-muted);
+              margin-top: 10px;
+              font-size: 0.85rem;
+            "
+          >
+            CIRCUITO DEL JARAMA
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section style="padding: 0 7% 120px; background: var(--gray2)">
+      <div style="padding-top: 100px">
+        <div class="section-divider">
+          <h2 class="reveal">
+            CAMINO AL <span class="divider-accent">JARAMA</span>
+          </h2>
+          <div class="divider-line"></div>
+        </div>
+        <div style="max-width: 700px">
+          <div class="process-step reveal">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h4>KICK-OFF: FORMACIÓN DEL EQUIPO</h4>
+              <p>
+                El proyecto arranca. Estudiantes con distintos perfiles se unen
+                bajo un objetivo común: diseñar y construir un monoplaza
+                competitivo. Se establecen roles, metodología de trabajo y el
+                calendario de desarrollo.
+              </p>
+            </div>
+          </div>
+          <div class="process-step reveal delay-1">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h4>DISEÑO CONCEPTUAL & CAD</h4>
+              <p>
+                El equipo de diseño traza los primeros bocetos y los traslada a
+                software CAD profesional. Cada componente se piensa para
+                maximizar rendimiento: peso, aerodinámica y refrigeración tienen
+                un rol específico.
+              </p>
+            </div>
+          </div>
+          <div class="process-step reveal delay-2">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h4>FABRICACIÓN & PROTOTIPADO</h4>
+              <p>
+                Del diseño digital a la pieza física. Impresión 3D, mecanizado y
+                ensamblaje a mano. Cada componente se prueba, falla, se mejora.
+                El ciclo de iteración es el corazón del proceso.
+              </p>
+            </div>
+          </div>
+          <div class="process-step reveal delay-3">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h4>VALIDACIÓN EN TÚNEL DE VIENTO</h4>
+              <p>
+                La aerodinámica del monoplaza se prueba y valida en condiciones
+                controladas. Los datos del túnel de viento guían los ajustes
+                finales del diseño aerodinámico y la distribución de carga.
+              </p>
+            </div>
+          </div>
+          <div class="process-step reveal delay-4" style="border-bottom: none">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <h4>RACE DAY: EL JARAMA</h4>
+              <p>
+                28 y 29 de abril. El Circuito del Jarama como escenario. Meses
+                de trabajo, miles de decisiones y un equipo que ha crecido
+                enormemente se reúnen en un único momento: la carrera.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="logo" style="font-size: 1.4rem">
+            <img
+              src="img/Logo.png"
+              alt="AT33 Logo"
+              style="
+                height: 32px;
+                width: 32px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 1px solid rgba(255, 24, 1, 0.4);
+              "
+            />
+            AT33<span class="logo-badge">RACING</span>
+          </a>
+          <p>
+            Equipo de estudiantes apasionados por la F1 y la ingeniería.
+            Compitiendo bajo el programa STEM Racing – Formula 1®.
+          </p>
+          <p
+            style="color: var(--primary); margin-top: 15px; font-size: 0.85rem"
+          >
+            @at33.stemracingteam
+          </p>
+        </div>
+        <div>
+          <p class="footer-title">PÁGINAS</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="escuderia.html">Escudería</a></li>
+            <li><a href="ingenieria.html">Ingeniería</a></li>
+            <li><a href="patrocinio.html">Patrocinio</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">CONTACTO</p>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:at33stemracingteamoficial@gmail.com"
+                >Email del equipo</a
+              >
+            </li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2024 AT33 STEM Racing Team · Todos los derechos reservados
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-link">IG</a>
+          <a
+            href="mailto:at33stemracingteamoficial@gmail.com"
+            class="social-link"
+            >EMAIL</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

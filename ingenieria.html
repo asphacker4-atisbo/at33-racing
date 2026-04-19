@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingeniería | AT33 STEM Racing</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;600;700&family=Barlow+Condensed:ital,wght@0,300;0,700;0,900;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <nav id="navbar">
+      <a href="index.html" class="logo">
+        <img
+          src="img/Logo.png"
+          alt="AT33 Logo"
+          style="
+            height: 38px;
+            width: 38px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 24, 1, 0.4);
+          "
+        />
+        AT33<span class="logo-badge">TECH</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-text="INICIO">INICIO</a></li>
+        <li><a href="escuderia.html" data-text="ESCUDERÍA">ESCUDERÍA</a></li>
+        <li>
+          <a href="ingenieria.html" class="active" data-text="INGENIERÍA"
+            >INGENIERÍA</a
+          >
+        </li>
+        <li><a href="patrocinio.html" data-text="PATROCINIO">PATROCINIO</a></li>
+      </ul>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div
+        class="page-header-bg"
+        style="background-image: url(&quot;img/Image 7.jpeg&quot;)"
+      ></div>
+      <div class="page-header-overlay"></div>
+      <div class="page-header-grid"></div>
+      <div class="page-header-content">
+        <p class="section-label" style="animation: fadeUp 0.6s 0.2s both">
+          DEPARTAMENTO TÉCNICO
+        </p>
+        <h1
+          class="page-header-title glitch"
+          data-text="INGENIERÍA"
+          style="animation: fadeUp 0.8s 0.4s both"
+        >
+          INGENIERÍA <span style="color: var(--primary)">AVANZADA</span>
+        </h1>
+        <p class="page-header-desc" style="animation: fadeUp 0.8s 0.6s both">
+          Cada curva de velocidad esconde horas de cálculo. Cada milímetro de
+          carrocería tiene una razón de ser. Esto es lo que pasa cuando la
+          ciencia se convierte en pasión.
+        </p>
+      </div>
+    </div>
+
+    <!-- TICKER -->
+    <div class="ticker-wrap">
+      <div class="ticker-inner">
+        <span class="ticker-item">AERODINÁMICA</span>
+        <span class="ticker-item">TÚNEL DE VIENTO</span>
+        <span class="ticker-item">ENTRADAS NACA</span>
+        <span class="ticker-item">CFD SIMULATION</span>
+        <span class="ticker-item">DOWNFORCE</span>
+        <span class="ticker-item">DRAG REDUCTION</span>
+        <span class="ticker-item">AERODINÁMICA</span>
+        <span class="ticker-item">TÚNEL DE VIENTO</span>
+        <span class="ticker-item">ENTRADAS NACA</span>
+        <span class="ticker-item">CFD SIMULATION</span>
+        <span class="ticker-item">DOWNFORCE</span>
+        <span class="ticker-item">DRAG REDUCTION</span>
+      </div>
+    </div>
+
+    <!-- HIGHLIGHTS -->
+    <section style="padding: 100px 7%">
+      <p class="section-label reveal">ÁREAS DE INGENIERÍA</p>
+      <h2
+        class="reveal"
+        style="font-size: clamp(1.8rem, 3vw, 2.8rem); margin-bottom: 15px"
+      >
+        INNOVACIÓN <span style="color: var(--primary)">AERODINÁMICA</span>
+      </h2>
+      <p
+        class="reveal"
+        style="
+          color: var(--text-muted);
+          max-width: 600px;
+          line-height: 1.8;
+          margin-bottom: 60px;
+          font-size: 1.05rem;
+        "
+      >
+        El objetivo de todo el departamento técnico es simple: ir más rápido.
+        Para lograrlo, aplicamos principios de ingeniería aeronáutica y
+        automotriz al diseño de nuestro monoplaza a escala.
+      </p>
+
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 3px;
+          margin-bottom: 3px;
+        "
+      >
+        <div
+          class="glass-card reveal"
+          style="
+            padding: 0;
+            overflow: hidden;
+            border-radius: 0;
+            aspect-ratio: 16/9;
+            position: relative;
+          "
+        >
+          <video
+            src="video/Video 11.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            style="width: 100%; height: 100%; object-fit: cover; display: block"
+          ></video>
+          <div
+            style="
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: linear-gradient(
+                to top,
+                rgba(6, 6, 8, 0.95),
+                transparent
+              );
+              padding: 30px 30px 25px;
+            "
+          >
+            <p
+              style="
+                font-size: 0.65rem;
+                letter-spacing: 3px;
+                color: var(--primary);
+                font-family: &quot;Orbitron&quot;, sans-serif;
+                margin-bottom: 8px;
+              "
+            >
+              01 — VALIDACIÓN
+            </p>
+            <h3
+              style="font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 8px"
+            >
+              TÚNEL DE VIENTO
+            </h3>
+            <p
+              style="
+                color: rgba(255, 255, 255, 0.65);
+                font-size: 0.9rem;
+                line-height: 1.6;
+              "
+            >
+              Cada configuración aerodinámica se prueba y valida en condiciones
+              controladas antes de llegar a la pista.
+            </p>
+          </div>
+        </div>
+        <div
+          class="glass-card reveal delay-1"
+          style="
+            padding: 0;
+            overflow: hidden;
+            border-radius: 0;
+            aspect-ratio: 16/9;
+            position: relative;
+          "
+        >
+          <img
+            src="img/Image 7.jpeg"
+            alt="Entrada NACA"
+            style="width: 100%; height: 100%; object-fit: cover; display: block"
+          />
+          <div
+            style="
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: linear-gradient(
+                to top,
+                rgba(6, 6, 8, 0.95),
+                transparent
+              );
+              padding: 30px 30px 25px;
+            "
+          >
+            <p
+              style="
+                font-size: 0.65rem;
+                letter-spacing: 3px;
+                color: var(--primary);
+                font-family: &quot;Orbitron&quot;, sans-serif;
+                margin-bottom: 8px;
+              "
+            >
+              02 — REFRIGERACIÓN
+            </p>
+            <h3
+              style="font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 8px"
+            >
+              ENTRADAS NACA
+            </h3>
+            <p
+              style="
+                color: rgba(255, 255, 255, 0.65);
+                font-size: 0.9rem;
+                line-height: 1.6;
+              "
+            >
+              Concepto aeronáutico aplicado para optimizar la toma de aire, la
+              refrigeración y la reducción de drag aerodinámico.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px"
+      >
+        <div
+          class="glass-card reveal delay-1"
+          style="
+            padding: 0;
+            overflow: hidden;
+            border-radius: 0;
+            aspect-ratio: 4/3;
+            position: relative;
+          "
+        >
+          <video
+            src="video/Video 10.mp4"
+            muted
+            loop
+            playsinline
+            onmouseover="this.play()"
+            onmouseleave="
+              this.pause();
+              this.currentTime = 0;
+            "
+            style="width: 100%; height: 100%; object-fit: cover; display: block"
+          ></video>
+          <div
+            style="
+              position: absolute;
+              inset: 0;
+              background: rgba(6, 6, 8, 0.3);
+              transition: background 0.3s;
+            "
+            onmouseover="this.style.background = 'rgba(6,6,8,0)'"
+            onmouseout="this.style.background = 'rgba(6,6,8,0.3)'"
+          ></div>
+        </div>
+        <div
+          class="glass-card reveal delay-2"
+          style="
+            padding: 0;
+            overflow: hidden;
+            border-radius: 0;
+            aspect-ratio: 4/3;
+            position: relative;
+          "
+        >
+          <video
+            src="video/Video 6.mp4"
+            muted
+            loop
+            playsinline
+            onmouseover="this.play()"
+            onmouseleave="
+              this.pause();
+              this.currentTime = 0;
+            "
+            style="width: 100%; height: 100%; object-fit: cover; display: block"
+          ></video>
+        </div>
+        <div
+          class="glass-card reveal delay-3"
+          style="
+            padding: 0;
+            overflow: hidden;
+            border-radius: 0;
+            aspect-ratio: 4/3;
+          "
+        >
+          <img
+            src="img/Image 5.jpeg"
+            style="width: 100%; height: 100%; object-fit: cover; display: block"
+            alt="Detalle técnico"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECS -->
+    <section style="padding: 0 7% 100px; background: var(--gray2)">
+      <div
+        style="
+          padding-top: 100px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 80px;
+          align-items: start;
+        "
+      >
+        <div>
+          <p class="section-label reveal">ESPECIFICACIONES</p>
+          <h2
+            class="reveal"
+            style="font-size: clamp(1.6rem, 3vw, 2.3rem); margin-bottom: 40px"
+          >
+            FICHA <span style="color: var(--primary)">TÉCNICA</span>
+          </h2>
+          <ul class="spec-list reveal">
+            <li class="spec-item">
+              <span class="spec-key">CATEGORÍA</span
+              ><span class="spec-val">F1 IN SCHOOLS</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-key">DIMENSIONES</span
+              ><span class="spec-val">Largo: 25 cm</span
+              ><span class="spec-val">Ancho: 6,5 cm</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-key">MATERIALES</span
+              ><span class="spec-val">Prototipado: Resina ABS (3D)</span
+              ><span class="spec-val"
+                >Final: <strong>Fibra de Carbono / Polibetano</strong></span
+              >
+            </li>
+            <li class="spec-item">
+              <span class="spec-key">PROPULSIÓN</span
+              ><span class="spec-val">Bombona de CO2 de alta presión</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-key">VALIDACIÓN</span
+              ><span class="spec-val">TÚNEL DE VIENTO</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-key">FABRICACIÓN</span
+              ><span class="spec-val"
+                >Mecanizado mediante <strong>fresado CNC</strong> para
+                competición final</span
+              >
+            </li>
+            <li class="spec-item">
+              <span class="spec-key">PISTA</span
+              ><span class="spec-val">CIRCUITO DEL JARAMA</span>
+            </li>
+            <li class="spec-item">
+              <span class="spec-key">CARRERA</span
+              ><span class="spec-val">28–29 ABRIL 2024</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section style="padding: 100px 7%">
+      <div class="section-divider">
+        <h2 class="reveal">
+          PROCESO <span class="divider-accent">DE DISEÑO</span>
+        </h2>
+        <div class="divider-line"></div>
+      </div>
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: start;
+        "
+      >
+        <div>
+          <div class="process-step reveal">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h4>INVESTIGACIÓN & CONCEPTO</h4>
+              <p>
+                Todo empieza con datos. Estudiamos referencias de la F1 real,
+                analizamos resultados de años anteriores de la competición y
+                definimos los objetivos de rendimiento del monoplaza.
+              </p>
+            </div>
+          </div>
+          <div class="process-step reveal delay-1">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h4>DISEÑO CAD & SIMULACIÓN CFD</h4>
+              <p>
+                El diseño se realiza en software CAD profesional. Las
+                superficies aerodinámicas se simulan digitalmente para prever su
+                comportamiento antes de fabricar ninguna pieza física.
+              </p>
+            </div>
+          </div>
+          <div class="process-step reveal delay-2">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h4>PROTOTIPADO RÁPIDO</h4>
+              <p>
+                Impresión 3D y mecanizado CNC para obtener prototipos físicos en
+                pocas horas. El ciclo de diseño–prueba–mejora se repite hasta
+                conseguir el óptimo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="process-step reveal">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h4>VALIDACIÓN EN TÚNEL DE VIENTO</h4>
+              <p>
+                El monoplaza se somete a pruebas en túnel de viento. Los datos
+                de presión, sustentación y arrastre guían los ajustes finales
+                del diseño aerodinámico.
+              </p>
+            </div>
+          </div>
+          <div class="process-step reveal delay-1">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <h4>ACABADO & PINTURA</h4>
+              <p>
+                La identidad visual del equipo se materializa en la librea del
+                coche. Cada detalle gráfico tiene un propósito tanto estético
+                como aerodinámico.
+              </p>
+            </div>
+          </div>
+          <div class="process-step reveal delay-2" style="border-bottom: none">
+            <div class="step-num">06</div>
+            <div class="step-content">
+              <h4>PUESTA A PUNTO & CARRERA</h4>
+              <p>
+                Ajuste final de parámetros, revisión de seguridad y preparación
+                para la salida. El trabajo de meses se resume en una fracción de
+                segundo sobre la pista.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section style="padding: 0 7% 120px">
+      <div class="quote-block reveal-scale">
+        <p class="quote-text">
+          "El túnel de viento no miente. Los datos son los datos. Por eso
+          confiamos en la ingeniería sobre la intuición."
+        </p>
+        <p class="quote-author">— DEPARTAMENTO TÉCNICO AT33</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="logo" style="font-size: 1.4rem">
+            <img
+              src="img/Logo.png"
+              alt="AT33 Logo"
+              style="
+                height: 32px;
+                width: 32px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 1px solid rgba(255, 24, 1, 0.4);
+              "
+            />
+            AT33<span class="logo-badge">RACING</span>
+          </a>
+          <p>
+            Ingeniería aplicada a la competición. Cada dato importa, cada
+            milímetro cuenta.
+          </p>
+          <p
+            style="color: var(--primary); margin-top: 15px; font-size: 0.85rem"
+          >
+            @at33.stemracingteam
+          </p>
+        </div>
+        <div>
+          <p class="footer-title">PÁGINAS</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="escuderia.html">Escudería</a></li>
+            <li><a href="ingenieria.html">Ingeniería</a></li>
+            <li><a href="patrocinio.html">Patrocinio</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">CONTACTO</p>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:at33stemracingteamoficial@gmail.com"
+                >Email del equipo</a
+              >
+            </li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2024 AT33 STEM Racing Team · Todos los derechos reservados
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-link">IG</a>
+          <a
+            href="mailto:at33stemracingteamoficial@gmail.com"
+            class="social-link"
+            >EMAIL</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

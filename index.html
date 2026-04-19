@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AT33 STEM RACING | Velocidad e Innovación</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;600;700&family=Barlow+Condensed:ital,wght@0,300;0,700;0,900;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- NAV -->
+    <nav id="navbar">
+      <a href="index.html" class="logo">
+        <img
+          src="img/Logo.png"
+          alt="AT33 Logo"
+          style="
+            height: 38px;
+            width: 38px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 24, 1, 0.4);
+          "
+        />
+        AT33
+        <span class="logo-badge">RACING</span>
+      </a>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html" class="active" data-text="INICIO">INICIO</a>
+        </li>
+        <li><a href="escuderia.html" data-text="ESCUDERÍA">ESCUDERÍA</a></li>
+        <li><a href="ingenieria.html" data-text="INGENIERÍA">INGENIERÍA</a></li>
+        <li><a href="patrocinio.html" data-text="PATROCINIO">PATROCINIO</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="video/Video 12.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-grid-overlay"></div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">STEM RACING TEAM · MADRID</p>
+        <div
+          style="
+            margin-bottom: 25px;
+            opacity: 0;
+            animation: fadeIn 1s 0.4s forwards;
+          "
+        >
+          <img
+            src="img/Logo.png"
+            alt="AT33 STEM Racing Logo"
+            style="
+              height: 130px;
+              width: 130px;
+              object-fit: cover;
+              border-radius: 50%;
+              border: 2px solid rgba(255, 24, 1, 0.5);
+              box-shadow:
+                0 0 40px rgba(255, 24, 1, 0.3),
+                0 0 80px rgba(255, 24, 1, 0.1);
+              animation: floatY 5s ease-in-out infinite;
+            "
+          />
+        </div>
+        <h1 class="hero-title glitch" data-text="VELOCIDAD E INNOVACIÓN">
+          <span class="line-white">VELOCIDAD</span>
+          <span class="line-red">E INNOVACIÓN</span>
+        </h1>
+        <p class="hero-subtitle">INGENIERÍA · PASIÓN · COMPETICIÓN</p>
+        <div class="hero-cta">
+          <a href="escuderia.html" class="btn-racing">CONOCE AL EQUIPO</a>
+          <a href="patrocinio.html" class="btn-outline">ÚNETE AL PROYECTO</a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </header>
+
+    <!-- TICKER -->
+    <div class="ticker-wrap">
+      <div class="ticker-inner">
+        <span class="ticker-item">STEM RACING</span>
+        <span class="ticker-item">CIRCUITO DEL JARAMA</span>
+        <span class="ticker-item">28–29 ABRIL</span>
+        <span class="ticker-item">INGENIERÍA APLICADA</span>
+        <span class="ticker-item">FÓRMULA 1 ESCOLAR</span>
+        <span class="ticker-item">AT33 STEM RACING</span>
+        <span class="ticker-item">INNOVACIÓN AERODINÁMICA</span>
+        <span class="ticker-item">MADRID, ESPAÑA</span>
+        <!-- duplicado para el loop -->
+        <span class="ticker-item">STEM RACING</span>
+        <span class="ticker-item">CIRCUITO DEL JARAMA</span>
+        <span class="ticker-item">28–29 ABRIL</span>
+        <span class="ticker-item">INGENIERÍA APLICADA</span>
+        <span class="ticker-item">FÓRMULA 1 ESCOLAR</span>
+        <span class="ticker-item">AT33 STEM RACING</span>
+        <span class="ticker-item">INNOVACIÓN AERODINÁMICA</span>
+        <span class="ticker-item">MADRID, ESPAÑA</span>
+      </div>
+    </div>
+
+    <!-- COUNTDOWN -->
+    <div class="countdown-section">
+      <div>
+        <p class="countdown-label">PRÓXIMA CARRERA</p>
+        <p class="countdown-title">CIRCUITO DEL JARAMA<br />28–29 DE ABRIL</p>
+      </div>
+      <div class="countdown-timer">
+        <div class="timer-unit">
+          <div class="timer-val" id="days">--</div>
+          <div class="timer-lbl">DÍAS</div>
+        </div>
+        <div class="timer-unit">
+          <div class="timer-val" id="hours">--</div>
+          <div class="timer-lbl">HORAS</div>
+        </div>
+        <div class="timer-unit">
+          <div class="timer-val" id="mins">--</div>
+          <div class="timer-lbl">MINUTOS</div>
+        </div>
+        <div class="timer-unit">
+          <div class="timer-val" id="secs">--</div>
+          <div class="timer-lbl">SEGUNDOS</div>
+        </div>
+      </div>
+      <div class="countdown-cta">
+        <a
+          href="patrocinio.html"
+          class="btn-outline"
+          style="border-color: rgba(255, 255, 255, 0.5); color: #fff"
+          >ÚNETE AHORA</a
+        >
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <section style="padding: 100px 0 0">
+      <div style="padding: 0 7%; margin-bottom: 60px">
+        <p class="section-label reveal">SOBRE NOSOTROS</p>
+        <h2 class="reveal" style="font-size: clamp(1.6rem, 3vw, 2.5rem)">
+          MÁS QUE UN EQUIPO.
+          <span style="color: var(--primary)">UN MOVIMIENTO.</span>
+        </h2>
+        <p
+          class="reveal"
+          style="
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-top: 20px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+          "
+        >
+          Somos estudiantes de 4º de ESO a Bachillerato que hemos decidido que
+          aprender ingeniería no se hace entre pupitres, sino con las manos
+          llenas de grasa y la mente llena de datos. AT33 STEM Racing es nuestra
+          forma de demostrar que el talento joven puede competir al más alto
+          nivel.
+        </p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item reveal delay-1">
+          <span class="feature-number">01</span>
+          <div class="feature-icon">🏎️</div>
+          <p class="feature-title">Diseño & Fabricación</p>
+          <p class="feature-desc">
+            Desde el papel hasta la pista, diseñamos y construimos nuestro
+            propio monoplaza a escala usando herramientas de ingeniería
+            profesionales. CAD, impresión 3D y trabajo manual convergen en una
+            máquina de competición real.
+          </p>
+        </div>
+        <div class="feature-item reveal delay-2">
+          <span class="feature-number">02</span>
+          <div class="feature-icon">💨</div>
+          <p class="feature-title">Aerodinámica Avanzada</p>
+          <p class="feature-desc">
+            Validamos cada superficie aerodinámica en túnel de viento.
+            Implementamos entradas NACA, alerones activos y gestión del flujo de
+            aire para maximizar downforce y minimizar drag en cada milímetro del
+            monoplaza.
+          </p>
+        </div>
+        <div class="feature-item reveal delay-3">
+          <span class="feature-number">03</span>
+          <div class="feature-icon">⚙️</div>
+          <p class="feature-title">Ingeniería en Equipo</p>
+          <p class="feature-desc">
+            Cada miembro aporta desde su especialidad: mecánica, electrónica,
+            programación, diseño gráfico y comunicación. Porque en la Fórmula 1,
+            la victoria es siempre colectiva y nunca individual.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUMBERS -->
+    <div class="numbers-band">
+      <div class="number-item reveal">
+        <div class="stat-number counter" data-target="20">0</div>
+        <div class="stat-label">MIEMBROS DEL EQUIPO</div>
+      </div>
+      <div class="number-item reveal delay-2">
+        <div class="stat-number">F1®</div>
+        <div class="stat-label">PROGRAMA OFICIAL</div>
+      </div>
+      <div class="number-item reveal delay-3">
+        <div class="stat-number counter" data-target="3">0</div>
+        <div class="stat-label">MESES DE DESARROLLO</div>
+      </div>
+      <div class="number-item reveal delay-4">
+        <div class="stat-number">1</div>
+        <div class="stat-label">META: EL JARAMA</div>
+      </div>
+    </div>
+
+    <!-- ABOUT EXPANDED -->
+    <section
+      style="
+        padding: 100px 7%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      "
+    >
+      <div>
+        <div class="reveal-left">
+          <p class="section-label">NUESTRA HISTORIA</p>
+          <h2
+            style="
+              font-size: clamp(1.6rem, 3vw, 2.3rem);
+              line-height: 1.2;
+              margin-bottom: 30px;
+            "
+          >
+            NACIDOS PARA
+            <span style="color: var(--primary)">REVOLUCIONAR</span> LA
+            INGENIERÍA
+          </h2>
+          <p
+            style="
+              color: rgba(255, 255, 255, 0.7);
+              line-height: 1.9;
+              margin-bottom: 20px;
+              font-size: 1.02rem;
+            "
+          >
+            Todo empezó con una pregunta: ¿por qué estudiar ingeniería de forma
+            teórica cuando podemos construir un coche de Fórmula 1? Desde ese
+            momento, AT33 STEM Racing nació como un proyecto disruptivo que
+            fusiona la pasión por la velocidad con el rigor científico.
+          </p>
+          <p
+            style="
+              color: rgba(255, 255, 255, 0.7);
+              line-height: 1.9;
+              margin-bottom: 30px;
+              font-size: 1.02rem;
+            "
+          >
+            Avalados por TVE, reconocidos por El Español y seleccionados para el
+            programa oficial
+            <strong style="color: #fff">STEM Racing – Formula 1®</strong>,
+            nuestro equipo ha demostrado que la edad no es un límite cuando la
+            determinación es real.
+          </p>
+          <div style="display: flex; gap: 15px; flex-wrap: wrap">
+            <a href="escuderia.html" class="btn-racing">LEER HISTORIA</a>
+            <a href="ingenieria.html" class="btn-outline">VER INGENIERÍA</a>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right" style="position: relative">
+        <div
+          style="
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid rgba(255, 24, 1, 0.15);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: floatY 6s ease-in-out infinite;
+          "
+        ></div>
+        <div
+          style="
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 24, 1, 0.06);
+            pointer-events: none;
+          "
+        ></div>
+        <img
+          src="img/Image 2.jpeg"
+          alt="AT33 Racing Team"
+          style="
+            width: 100%;
+            border-radius: 3px;
+            position: relative;
+            z-index: 1;
+            filter: brightness(0.9);
+          "
+        />
+        <div
+          style="
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 2;
+            background: rgba(6, 6, 8, 0.9);
+            padding: 15px 20px;
+            border-left: 3px solid var(--primary);
+          "
+        >
+          <p
+            style="
+              font-size: 0.65rem;
+              letter-spacing: 3px;
+              color: var(--primary);
+              font-family: &quot;Orbitron&quot;, sans-serif;
+            "
+          >
+            ESTUDIO ROY
+          </p>
+          <p style="font-size: 0.85rem; color: #fff; margin-top: 3px">
+            Innovación & Diseño
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section style="padding: 0 7% 100px">
+      <div class="quote-block reveal-scale">
+        <p class="quote-text">
+          "La ingeniería no es una asignatura. Es una forma de ver el mundo y
+          resolverlo."
+        </p>
+        <p class="quote-author">— AT33 STEM RACING TEAM</p>
+      </div>
+    </section>
+
+    <!-- PRESS PREVIEW -->
+    <section style="padding: 100px 7%; background: var(--gray)">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin-bottom: 60px;
+          flex-wrap: wrap;
+          gap: 20px;
+        "
+      >
+        <div>
+          <p class="section-label reveal">EN LOS MEDIOS</p>
+          <h2 class="reveal" style="font-size: clamp(1.6rem, 3vw, 2.3rem)">
+            RECONOCIDOS <span style="color: var(--primary)">NACIONALMENTE</span>
+          </h2>
+        </div>
+        <a href="escuderia.html" class="btn-outline reveal">VER ESCUDERÍA →</a>
+      </div>
+      <div
+        style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px"
+      >
+        <div class="media-card reveal delay-1">
+          <div class="media-name">TVE</div>
+          <p class="media-desc">
+            La televisión nacional ha difundido nuestros avances en robótica e
+            innovación educativa, destacando el modelo de aprendizaje basado en
+            proyectos reales que AT33 representa.
+          </p>
+        </div>
+        <div class="media-card reveal delay-2">
+          <div class="media-name">EL ESPAÑOL</div>
+          <p class="media-desc">
+            Reportajes sobre cómo el talento joven está transformando la
+            relación entre la educación y la ingeniería aplicada, con AT33 como
+            referente de innovación estudiantil.
+          </p>
+        </div>
+        <div class="media-card reveal delay-3">
+          <div class="media-name">F1® STEM</div>
+          <p class="media-desc">
+            Orgullosamente seleccionados para el programa oficial
+            <strong>STEM Racing – Formula 1®</strong>, la plataforma
+            internacional que conecta a jóvenes ingenieros con el mundo del
+            automovilismo de élite.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section
+      style="
+        padding: 120px 7%;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 600px;
+          height: 600px;
+          border-radius: 50%;
+          background: radial-gradient(
+            circle,
+            rgba(255, 24, 1, 0.06) 0%,
+            transparent 70%
+          );
+          pointer-events: none;
+        "
+      ></div>
+      <p class="section-label reveal" style="justify-content: center">
+        ÚNETE A NOSOTROS
+      </p>
+      <h2
+        class="reveal"
+        style="
+          font-size: clamp(2rem, 5vw, 4rem);
+          line-height: 1.1;
+          margin-bottom: 20px;
+        "
+      >
+        ¿QUIERES <span style="color: var(--primary)">FORMAR PARTE</span><br />DE
+        LA HISTORIA?
+      </h2>
+      <p
+        class="reveal"
+        style="
+          color: var(--text-muted);
+          max-width: 500px;
+          margin: 0 auto 50px;
+          line-height: 1.8;
+          font-size: 1.05rem;
+        "
+      >
+        Patrocina al equipo, colabora técnicamente o únete a la revolución
+        educativa. Hay un lugar para ti en AT33 STEM Racing.
+      </p>
+      <div
+        class="reveal"
+        style="
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          flex-wrap: wrap;
+        "
+      >
+        <a href="patrocinio.html" class="btn-racing">SOLICITAR DOSSIER</a>
+        <a href="mailto:at33stemracingteamoficial@gmail.com" class="btn-outline"
+          >CONTACTAR AHORA</a
+        >
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="logo" style="font-size: 1.4rem">
+            <img
+              src="img/Logo.png"
+              alt="AT33 Logo"
+              style="
+                height: 32px;
+                width: 32px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 1px solid rgba(255, 24, 1, 0.4);
+              "
+            />
+            AT33<span class="logo-badge">RACING</span>
+          </a>
+          <p>
+            Equipo de estudiantes de Bachillerato apasionados por la Fórmula 1 y
+            la ingeniería. Compitiendo en el Circuito del Jarama bajo el
+            programa oficial STEM Racing – Formula 1®.
+          </p>
+          <p
+            style="color: var(--primary); margin-top: 15px; font-size: 0.85rem"
+          >
+            @at33.stemracingteam
+          </p>
+        </div>
+        <div>
+          <p class="footer-title">PÁGINAS</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="escuderia.html">Escudería</a></li>
+            <li><a href="ingenieria.html">Ingeniería</a></li>
+            <li><a href="patrocinio.html">Patrocinio</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">CONTACTO</p>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:at33stemracingteamoficial@gmail.com">Email</a>
+            </li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+          <div style="margin-top: 30px">
+            <p
+              style="
+                font-size: 0.65rem;
+                letter-spacing: 3px;
+                color: var(--text-muted);
+                font-family: &quot;Orbitron&quot;, sans-serif;
+                margin-bottom: 10px;
+              "
+            >
+              PRÓXIMA CARRERA
+            </p>
+            <p
+              style="color: var(--primary); font-weight: 700; font-size: 1.1rem"
+            >
+              28–29 ABRIL
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-muted)">
+              Circuito del Jarama
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2024 AT33 STEM Racing Team · Todos los derechos reservados
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-link">IG</a>
+          <a
+            href="mailto:at33stemracingteamoficial@gmail.com"
+            class="social-link"
+            >EMAIL</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
