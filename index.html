@@ -85,11 +85,6 @@
           <a href="patrocinio.html" class="btn-outline">ÚNETE AL PROYECTO</a>
         </div>
       </div>
-
-      <div class="hero-scroll-indicator">
-        <span>SCROLL</span>
-        <div class="scroll-line"></div>
-      </div>
     </header>
 
     <!-- TICKER -->
@@ -413,6 +408,235 @@
       </div>
     </section>
 
+    <!-- CAMISETAS / MERCH -->
+    <section
+      id="merch-section"
+      style="padding: 100px 7%; background: var(--dark)"
+    >
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 80px;
+          align-items: center;
+        "
+      >
+        <div>
+          <p class="section-label reveal">COLECCIÓN OFICIAL</p>
+          <h2
+            class="reveal"
+            style="
+              font-size: clamp(1.8rem, 3vw, 2.8rem);
+              line-height: 1.1;
+              margin-bottom: 25px;
+            "
+          >
+            VISTE LOS <span style="color: var(--primary)">COLORES</span
+            ><br />DEL EQUIPO
+          </h2>
+          <p
+            class="reveal"
+            style="
+              color: rgba(255, 255, 255, 0.7);
+              line-height: 1.9;
+              margin-bottom: 20px;
+              font-size: 1.02rem;
+            "
+          >
+            Hazte con la camiseta oficial de AT33 STEM Racing y forma parte del
+            movimiento. Cada prenda lleva la identidad visual del equipo: el
+            logo del lince, los colores de España y la pasión por la Fórmula 1.
+          </p>
+          <p
+            class="reveal"
+            style="
+              color: rgba(255, 255, 255, 0.7);
+              line-height: 1.9;
+              margin-bottom: 30px;
+              font-size: 1.02rem;
+            "
+          >
+            Las camisetas se producen en edición limitada para cada temporada.
+            Al comprarla, apoyas directamente la financiación del equipo para la
+            competición del Jarama.
+          </p>
+
+          <!-- Selector de talla -->
+          <div class="reveal" style="margin-bottom: 25px">
+            <p
+              style="
+                font-family: &quot;Orbitron&quot;, sans-serif;
+                font-size: 0.65rem;
+                letter-spacing: 3px;
+                color: var(--text-muted);
+                margin-bottom: 12px;
+              "
+            >
+              SELECCIONA TALLA
+            </p>
+            <div
+              style="display: flex; gap: 8px; flex-wrap: wrap"
+              id="size-selector"
+            >
+              <button onclick="selectSize(this, 'XS')" class="size-btn">
+                XS
+              </button>
+              <button onclick="selectSize(this, 'S')" class="size-btn">
+                S
+              </button>
+              <button
+                onclick="selectSize(this, 'M')"
+                class="size-btn size-btn-active"
+              >
+                M
+              </button>
+              <button onclick="selectSize(this, 'L')" class="size-btn">
+                L
+              </button>
+              <button onclick="selectSize(this, 'XL')" class="size-btn">
+                XL
+              </button>
+              <button onclick="selectSize(this, 'XXL')" class="size-btn">
+                XXL
+              </button>
+            </div>
+          </div>
+
+          <!-- Resumen pedido -->
+          <div
+            class="reveal"
+            id="order-summary"
+            style="
+              background: rgba(255, 24, 1, 0.05);
+              border: 1px solid rgba(255, 24, 1, 0.2);
+              padding: 18px 22px;
+              margin-bottom: 25px;
+              display: none;
+            "
+          >
+            <p
+              style="
+                font-family: &quot;Orbitron&quot;, sans-serif;
+                font-size: 0.62rem;
+                letter-spacing: 3px;
+                color: var(--primary);
+                margin-bottom: 8px;
+              "
+            >
+              RESUMEN DEL PEDIDO
+            </p>
+            <p
+              id="order-text"
+              style="
+                color: rgba(255, 255, 255, 0.85);
+                font-size: 0.95rem;
+                line-height: 1.7;
+              "
+            ></p>
+          </div>
+
+          <div
+            class="reveal"
+            style="
+              display: flex;
+              gap: 15px;
+              flex-wrap: wrap;
+              align-items: center;
+            "
+          >
+            <a
+              id="merch-cta"
+              href="mailto:at33stemracingteamoficial@gmail.com?subject=Camiseta%20AT33%20%E2%80%94%20Talla%20M%20%2F%20Negra&body=Hola%2C%20me%20gustar%C3%ADa%20pedir%20una%20camiseta%20AT33.%0A%0ATalla%3A%20M%0AColor%3A%20Negra%0A%0AGracias."
+              class="btn-racing"
+              >PEDIR CAMISETA</a
+            >
+            <p style="color: var(--text-muted); font-size: 0.85rem">
+              Precio orientativo: <strong style="color: #fff">20€</strong>
+            </p>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <div
+            style="
+              position: relative;
+              background: var(--gray2);
+              border: 1px solid var(--border);
+              padding: 0; /* Quitamos el padding para que la imagen luzca mejor */
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              min-height: 320px;
+              overflow: hidden;
+            "
+          >
+            <div
+              style="
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                z-index: 2;
+                text-align: right;
+              "
+            >
+              <p
+                style="
+                  font-family: &quot;Orbitron&quot;, sans-serif;
+                  font-size: 0.6rem;
+                  letter-spacing: 2px;
+                  color: var(--primary);
+                "
+              >
+                OFICIAL
+              </p>
+              <p
+                style="
+                  font-family: &quot;Orbitron&quot;, sans-serif;
+                  font-size: 0.6rem;
+                  letter-spacing: 2px;
+                  color: var(--text-muted);
+                "
+              >
+                EDICIÓN 2026
+              </p>
+            </div>
+
+            <img
+              src="img/camiseta.jpeg"
+              alt="Camiseta Oficial AT33"
+              style="
+                width: 100%;
+                height: auto;
+                display: block;
+                filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));
+              "
+            />
+          </div>
+
+          <div
+            class="glass-card"
+            style="padding: 20px 25px; border-radius: 0; margin-top: 3px"
+          >
+            <p
+              style="
+                font-size: 0.65rem;
+                letter-spacing: 4px;
+                font-family: &quot;Orbitron&quot;, sans-serif;
+                color: var(--text-muted);
+                margin-bottom: 10px;
+              "
+            >
+              INCLUYE
+            </p>
+            <p style="color: #fff; font-size: 0.95rem; line-height: 1.8">
+              Logo oficial AT33 · Número
+              <strong style="color: var(--primary)">#33</strong> · Bandera
+              España · Bordado STEM Racing F1®
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA FINAL -->
     <section
       style="
@@ -553,7 +777,7 @@
       </div>
       <div class="footer-bottom">
         <p class="footer-copy">
-          © 2024 AT33 STEM Racing Team · Todos los derechos reservados
+          © 2026 AT33 STEM Racing Team · Todos los derechos reservados
         </p>
         <div class="footer-social">
           <a href="#" class="social-link">IG</a>
@@ -566,6 +790,136 @@
       </div>
     </footer>
 
+    <script>
+      // ─── MERCH: SELECTOR DE TALLA ─────────────────────
+      let selectedSize = "M";
+      let selectedColor = "negro";
+      let selectedColorLabel = "Negra";
+
+      function selectSize(btn, size) {
+        document
+          .querySelectorAll(".size-btn")
+          .forEach((b) => b.classList.remove("size-btn-active"));
+        btn.classList.add("size-btn-active");
+        selectedSize = size;
+        updateMerchCTA();
+        showOrderSummary();
+      }
+
+      function selectColor(color, hex, btn) {
+        document
+          .querySelectorAll(".color-swatch")
+          .forEach((b) => b.classList.remove("color-swatch-active"));
+        btn.classList.add("color-swatch-active");
+        selectedColor = color;
+
+        const labels = { negro: "Negra", azul: "Azul marino", roja: "Roja" };
+        selectedColorLabel = labels[color] || color;
+        document.getElementById("shirt-color-label").textContent =
+          selectedColorLabel.toUpperCase();
+
+        // Cambiar color del SVG
+        const fills = ["shirt-fill-1", "shirt-fill-2", "shirt-fill-3"];
+        const colorMap = { negro: "#0a0a0a", azul: "#1a2040", roja: "#cc1200" };
+        fills.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) el.setAttribute("fill", colorMap[color]);
+        });
+        const neck = document.getElementById("shirt-fill-4");
+        const neckMap = { negro: "#111", azul: "#151a30", roja: "#aa0e00" };
+        if (neck) neck.setAttribute("fill", neckMap[color]);
+
+        updateMerchCTA();
+        showOrderSummary();
+      }
+
+      function showOrderSummary() {
+        const summary = document.getElementById("order-summary");
+        const text = document.getElementById("order-text");
+        summary.style.display = "block";
+        text.textContent = `1× Camiseta AT33 STEM Racing · ${selectedColorLabel} · Talla ${selectedSize} · Edición 2026`;
+      }
+
+      function updateMerchCTA() {
+        const cta = document.getElementById("merch-cta");
+        const subject = encodeURIComponent(
+          `Camiseta AT33 — Talla ${selectedSize}`,
+        );
+        const body = encodeURIComponent(
+          `Hola, me gustaría pedir una camiseta AT33.\n\nTalla: ${selectedSize}\n\nGracias.`,
+        );
+        cta.href = `mailto:at33stemracingteamoficial@gmail.com?subject=${subject}&body=${body}`;
+      }
+
+      function showOrderSummary() {
+        const summary = document.getElementById("order-summary");
+        const text = document.getElementById("order-text");
+        summary.style.display = "block";
+        text.textContent = `1× Camiseta AT33 STEM Racing · Talla ${selectedSize} · Edición 2026`;
+      }
+
+      // ─── DONACIONES: SELECTOR INTERACTIVO ───────────────
+      const donationPerks = {
+        5: {
+          label: "COLABORADOR — 5€",
+          desc: "Mención en redes sociales del equipo + Certificado digital de colaborador.",
+        },
+        15: {
+          label: "POPULAR ⭐ — 15€",
+          desc: "Mención en redes sociales + Certificado digital + Tu nombre en la lista de colaboradores del Jarama.",
+        },
+        50: {
+          label: "PADRINO — 50€",
+          desc: "Todo lo anterior + Logo/nombre en el monoplaza digital + Reconocimiento especial en la ceremonia del Jarama.",
+        },
+      };
+      let selectedAmount = 15;
+      let selectedTier = "POPULAR";
+
+      function selectDonation(btn, amount, tier) {
+        document
+          .querySelectorAll(".donation-btn")
+          .forEach((b) => b.classList.remove("donation-btn-active"));
+        btn.classList.add("donation-btn-active");
+        document.getElementById("custom-amount").value = "";
+        setDonation(amount, tier);
+      }
+
+      function onCustomAmount(input) {
+        document
+          .querySelectorAll(".donation-btn")
+          .forEach((b) => b.classList.remove("donation-btn-active"));
+      }
+
+      function applyCustomAmount() {
+        const val = parseInt(document.getElementById("custom-amount").value);
+        if (!val || val < 1) return;
+        let tier = val >= 50 ? "PADRINO" : val >= 15 ? "COLABORADOR" : "APOYO";
+        setDonation(val, tier);
+      }
+
+      function setDonation(amount, tier) {
+        selectedAmount = amount;
+        selectedTier = tier;
+
+        const perk = donationPerks[amount] || {
+          label: `DONACIÓN — ${amount}€`,
+          desc: "Mención en redes sociales + Certificado digital de colaborador.",
+        };
+        document.getElementById("perk-title").textContent = perk.label;
+        document.getElementById("perk-desc").textContent = perk.desc;
+
+        const ctaBtn = document.getElementById("donation-cta");
+        const subject = encodeURIComponent(
+          `Donación AT33 — ${amount}€ (${tier})`,
+        );
+        const body = encodeURIComponent(
+          `Hola, me gustaría hacer una donación de ${amount}€ al equipo AT33 STEM Racing.\n\nGracias.`,
+        );
+        ctaBtn.href = `mailto:at33stemracingteamoficial@gmail.com?subject=${subject}&body=${body}`;
+        ctaBtn.textContent = `DONAR ${amount}€ AL EQUIPO`;
+      }
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -174,15 +174,15 @@ nav.scrolled {
   right: 0;
   text-align: center;
   color: var(--primary);
-  transition: all 0.3s;
+  transition: all 0.25s ease;
   padding: 8px 20px;
 }
 .nav-links a:hover {
   color: transparent;
-  transform: translateY(-100%);
+  transform: translateY(-30%);
 }
 .nav-links a:hover::before {
-  top: 0;
+  top: 20%;
 }
 .nav-links a.active {
   color: var(--primary);
@@ -1387,8 +1387,68 @@ footer {
 }
 
 /* ═══════════════════════════════════════
-   RESPONSIVE
+   MERCH — SIZE & COLOR SELECTORS
 ═══════════════════════════════════════ */
+.size-btn {
+  background: var(--gray2);
+  border: 1px solid var(--border);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  padding: 10px 16px;
+  cursor: none;
+  transition: all 0.25s;
+}
+.size-btn:hover {
+  border-color: var(--primary);
+  color: #fff;
+}
+.size-btn-active {
+  border-color: var(--primary) !important;
+  background: rgba(255, 24, 1, 0.1) !important;
+  color: #fff !important;
+}
+
+.color-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  cursor: none;
+  transition: all 0.25s;
+  transform: scale(1);
+}
+.color-swatch:hover {
+  transform: scale(1.15);
+}
+.color-swatch-active {
+  border-color: var(--primary) !important;
+  transform: scale(1.18) !important;
+  box-shadow: 0 0 10px rgba(255, 24, 1, 0.4);
+}
+
+/* ═══════════════════════════════════════
+   DONATION BUTTONS
+═══════════════════════════════════════ */
+.donation-btn {
+  background: var(--gray2);
+  border: 1px solid var(--border);
+  padding: 20px;
+  text-align: center;
+  cursor: none;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+}
+.donation-btn:hover {
+  border-color: var(--primary);
+  background: rgba(255, 24, 1, 0.06);
+}
+.donation-btn-active {
+  background: rgba(255, 24, 1, 0.08) !important;
+  border-color: var(--primary) !important;
+}
 @media (max-width: 900px) {
   .features-grid {
     grid-template-columns: 1fr;
