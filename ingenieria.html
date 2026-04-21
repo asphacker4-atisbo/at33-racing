@@ -12,8 +12,12 @@
     <link rel="icon" type="image/png" href="img/Logo.png" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; video-src 'self';"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://ajax.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; video-src 'self';"
     />
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
+    ></script>
   </head>
   <body>
     <div class="cursor" id="cursor"></div>
@@ -399,92 +403,61 @@
               border: 1px solid rgba(255, 24, 1, 0.2);
               overflow: hidden;
               height: 340px;
-              cursor: grab;
             "
           >
-            <!-- Canvas WebGL -->
-            <canvas
-              id="car-canvas"
-              style="width: 100%; height: 100%; display: block"
-            ></canvas>
-
-            <!-- Overlay UI -->
-            <div
-              style="
-                position: absolute;
-                top: 15px;
-                left: 15px;
-                pointer-events: none;
-              "
+            <model-viewer
+              src="models/car_model.glb"
+              alt="AT33 Monoplaza 2026"
+              auto-rotate
+              camera-controls
+              shadow-intensity="1"
+              environment-image="neutral"
+              exposure="1"
+              interaction-prompt="none"
+              style="width: 100%; height: 100%; outline: none"
             >
-              <p
+              <div
                 style="
-                  font-family: &quot;Orbitron&quot;, sans-serif;
-                  font-size: 0.58rem;
-                  letter-spacing: 3px;
-                  color: var(--primary);
+                  position: absolute;
+                  top: 15px;
+                  left: 15px;
+                  pointer-events: none;
                 "
               >
-                AT33 · MONOPLAZA 2026
-              </p>
-            </div>
-            <div
-              style="
-                position: absolute;
-                bottom: 15px;
-                left: 50%;
-                transform: translateX(-50%);
-                pointer-events: none;
-              "
-            >
-              <p
+                <p
+                  style="
+                    font-family: &quot;Orbitron&quot;, sans-serif;
+                    font-size: 0.58rem;
+                    letter-spacing: 3px;
+                    color: var(--primary);
+                  "
+                >
+                  AT33 · MONOPLAZA 2026
+                </p>
+              </div>
+
+              <div
                 style="
-                  font-family: &quot;Orbitron&quot;, sans-serif;
-                  font-size: 0.55rem;
-                  letter-spacing: 2px;
-                  color: rgba(255, 255, 255, 0.35);
-                  text-align: center;
+                  position: absolute;
+                  bottom: 15px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  pointer-events: none;
                 "
               >
-                ARRASTRA PARA ROTAR · SCROLL PARA ZOOM
-              </p>
-            </div>
-
-            <!-- Grid decorativo de fondo -->
-            <div
-              style="
-                position: absolute;
-                inset: 0;
-                background-image:
-                  linear-gradient(rgba(255, 24, 1, 0.03) 1px, transparent 1px),
-                  linear-gradient(
-                    90deg,
-                    rgba(255, 24, 1, 0.03) 1px,
-                    transparent 1px
-                  );
-                background-size: 30px 30px;
-                pointer-events: none;
-              "
-            ></div>
-
-            <!-- Controles de vista -->
-            <div
-              style="
-                position: absolute;
-                top: 15px;
-                right: 15px;
-                display: flex;
-                flex-direction: column;
-                gap: 4px;
-              "
-            >
-              <button onclick="setView('front')" class="view-btn">FRONT</button>
-              <button onclick="setView('side')" class="view-btn">SIDE</button>
-              <button onclick="setView('top')" class="view-btn">TOP</button>
-              <button onclick="setView('iso')" class="view-btn view-btn-active">
-                ISO
-              </button>
-            </div>
+                <p
+                  style="
+                    font-family: &quot;Orbitron&quot;, sans-serif;
+                    font-size: 0.55rem;
+                    letter-spacing: 2px;
+                    color: rgba(255, 255, 255, 0.35);
+                    text-align: center;
+                  "
+                >
+                  ARRASTRA PARA ROTAR · SCROLL PARA ZOOM
+                </p>
+              </div>
+            </model-viewer>
           </div>
 
           <!-- Info bajo el viewer -->
