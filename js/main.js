@@ -16,8 +16,8 @@ if (cursor && cursorRing) {
   });
 
   function animateRing() {
-    ringX += (mouseX - ringX) * 0.9;
-    ringY += (mouseY - ringY) * 0.9;
+    ringX += (mouseX - ringX) * 1;
+    ringY += (mouseY - ringY) * 1;
     cursorRing.style.left = ringX - 18 + "px";
     cursorRing.style.top = ringY - 18 + "px";
     requestAnimationFrame(animateRing);
@@ -186,3 +186,127 @@ glitchEls.forEach((el) => {
     }
   }, 2000);
 });
+// ─── MERCH: SELECTOR DE TALLA ─────────────────────
+let selectedSize = "M";
+let selectedColor = "negro";
+let selectedColorLabel = "Negra";
+
+function selectSize(btn, size) {
+  document
+    .querySelectorAll(".size-btn")
+    .forEach((b) => b.classList.remove("size-btn-active"));
+  btn.classList.add("size-btn-active");
+  selectedSize = size;
+  updateMerchCTA();
+  showOrderSummary();
+}
+
+function selectColor(color, hex, btn) {
+  document
+    .querySelectorAll(".color-swatch")
+    .forEach((b) => b.classList.remove("color-swatch-active"));
+  btn.classList.add("color-swatch-active");
+  selectedColor = color;
+
+  const labels = { negro: "Negra", azul: "Azul marino", roja: "Roja" };
+  selectedColorLabel = labels[color] || color;
+  document.getElementById("shirt-color-label").textContent =
+    selectedColorLabel.toUpperCase();
+
+  // Cambiar color del SVG
+  const fills = ["shirt-fill-1", "shirt-fill-2", "shirt-fill-3"];
+  const colorMap = { negro: "#0a0a0a", azul: "#1a2040", roja: "#cc1200" };
+  fills.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.setAttribute("fill", colorMap[color]);
+  });
+  const neck = document.getElementById("shirt-fill-4");
+  const neckMap = { negro: "#111", azul: "#151a30", roja: "#aa0e00" };
+  if (neck) neck.setAttribute("fill", neckMap[color]);
+
+  updateMerchCTA();
+  showOrderSummary();
+}
+
+function showOrderSummary() {
+  const summary = document.getElementById("order-summary");
+  const text = document.getElementById("order-text");
+  summary.style.display = "block";
+  text.textContent = `1× Camiseta AT33 STEM Racing · ${selectedColorLabel} · Talla ${selectedSize} · Edición 2026`;
+}
+
+function updateMerchCTA() {
+  const cta = document.getElementById("merch-cta");
+  const subject = encodeURIComponent(`Camiseta AT33 — Talla ${selectedSize}`);
+  const body = encodeURIComponent(
+    `Hola, me gustaría pedir una camiseta AT33.\n\nTalla: ${selectedSize}\n\nGracias.`,
+  );
+  cta.href = `mailto:at33stemracingteamoficial@gmail.com?subject=${subject}&body=${body}`;
+}
+
+function showOrderSummary() {
+  const summary = document.getElementById("order-summary");
+  const text = document.getElementById("order-text");
+  summary.style.display = "block";
+  text.textContent = `1× Camiseta AT33 STEM Racing · Talla ${selectedSize} · Edición 2026`;
+}
+
+// ─── DONACIONES: SELECTOR INTERACTIVO ───────────────
+const donationPerks = {
+  5: {
+    label: "COLABORADOR — 5€",
+    desc: "Mención en redes sociales del equipo + Certificado digital de colaborador.",
+  },
+  15: {
+    label: "POPULAR ⭐ — 15€",
+    desc: "Mención en redes sociales + Certificado digital + Tu nombre en la lista de colaboradores del Jarama.",
+  },
+  50: {
+    label: "PADRINO — 50€",
+    desc: "Todo lo anterior + Logo/nombre en el monoplaza digital + Reconocimiento especial en la ceremonia del Jarama.",
+  },
+};
+let selectedAmount = 15;
+let selectedTier = "POPULAR";
+
+function selectDonation(btn, amount, tier) {
+  document
+    .querySelectorAll(".donation-btn")
+    .forEach((b) => b.classList.remove("donation-btn-active"));
+  btn.classList.add("donation-btn-active");
+  document.getElementById("custom-amount").value = "";
+  setDonation(amount, tier);
+}
+
+function onCustomAmount(input) {
+  document
+    .querySelectorAll(".donation-btn")
+    .forEach((b) => b.classList.remove("donation-btn-active"));
+}
+
+function applyCustomAmount() {
+  const val = parseInt(document.getElementById("custom-amount").value);
+  if (!val || val < 1) return;
+  let tier = val >= 50 ? "PADRINO" : val >= 15 ? "COLABORADOR" : "APOYO";
+  setDonation(val, tier);
+}
+
+function setDonation(amount, tier) {
+  selectedAmount = amount;
+  selectedTier = tier;
+
+  const perk = donationPerks[amount] || {
+    label: `DONACIÓN — ${amount}€`,
+    desc: "Mención en redes sociales + Certificado digital de colaborador.",
+  };
+  document.getElementById("perk-title").textContent = perk.label;
+  document.getElementById("perk-desc").textContent = perk.desc;
+
+  const ctaBtn = document.getElementById("donation-cta");
+  const subject = encodeURIComponent(`Donación AT33 — ${amount}€ (${tier})`);
+  const body = encodeURIComponent(
+    `Hola, me gustaría hacer una donación de ${amount}€ al equipo AT33 STEM Racing.\n\nGracias.`,
+  );
+  ctaBtn.href = `mailto:at33stemracingteamoficial@gmail.com?subject=${subject}&body=${body}`;
+  ctaBtn.textContent = `DONAR ${amount}€ AL EQUIPO`;
+}
