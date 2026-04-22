@@ -145,6 +145,9 @@ nav.scrolled {
 .logo span {
   color: var(--primary);
 }
+.logo:hover img {
+  transform: scale(1.2);
+}
 
 .nav-links {
   display: flex;
