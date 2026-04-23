@@ -14,6 +14,105 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://ajax.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; video-src 'self';"
     />
+
+    <style>
+      /* ── Inline-grid responsive overrides ── */
+      @media (max-width: 900px) {
+        /* Any direct-child grid with 2 explicit columns collapses to 1 */
+        section > div[style*="grid-template-columns: 1.2fr"],
+        section > div[style*="grid-template-columns: 1fr 1fr"],
+        section[style*="grid-template-columns: 1fr 1fr"],
+        div[style*="grid-template-columns: 1fr 1fr"] {
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 40px !important;
+        }
+
+        div[style*="grid-template-columns: repeat(3, 1fr)"] {
+          display: grid !important;
+          grid-template-columns: 1fr !important;
+          gap: 2px !important;
+        }
+        div[style*="grid-template-columns: repeat(4, 1fr)"] {
+          display: grid !important;
+          grid-template-columns: 1fr 1fr !important;
+          gap: 2px !important;
+        }
+
+        /* Keep small 2x2 stat grids intact */
+        div[style*="grid-template-columns: repeat(2, 1fr)"] {
+          display: grid !important;
+          grid-template-columns: 1fr 1fr !important;
+        }
+
+        /* ingenieria highlights 2col with 3px gap stays grid */
+        div[style*="grid-template-columns: 1fr 1fr"][style*="gap: 3px"],
+        div[style*="grid-template-columns: 1fr 1fr"][style*="gap: 3"] {
+          display: grid !important;
+          grid-template-columns: 1fr !important;
+          gap: 3px !important;
+        }
+
+        /* 3-col with 3px gap: 2 cols on tablet */
+        div[style*="grid-template-columns: repeat(3, 1fr)"][style*="gap: 3px"] {
+          grid-template-columns: 1fr 1fr !important;
+        }
+
+        section[style*="padding: 100px 7%"] {
+          padding: 60px 5% !important;
+        }
+        section[style*="padding: 0 7% 100px"] {
+          padding: 0 5% 60px !important;
+        }
+        section[style*="padding: 0 7% 120px"] {
+          padding: 0 5% 70px !important;
+        }
+        section[style*="padding: 100px 7%; background"] {
+          padding: 60px 5% !important;
+        }
+        section[style*="padding: 120px 7%"] {
+          padding: 70px 5% !important;
+        }
+      }
+      @media (max-width: 600px) {
+        div[style*="grid-template-columns: repeat(4, 1fr)"] {
+          grid-template-columns: 1fr !important;
+        }
+        div[style*="grid-template-columns: repeat(3, 1fr)"][style*="gap: 3px"] {
+          grid-template-columns: 1fr !important;
+        }
+        div[style*="grid-template-columns: 1fr 1fr"][style*="gap: 3px"] {
+          grid-template-columns: 1fr !important;
+        }
+
+        section[style*="padding: 100px 7%"] {
+          padding: 55px 4% !important;
+        }
+        section[style*="padding: 0 7% 100px"] {
+          padding: 0 4% 55px !important;
+        }
+        section[style*="padding: 0 7% 120px"] {
+          padding: 0 4% 60px !important;
+        }
+        section[style*="padding: 100px 7%; background"] {
+          padding: 55px 4% !important;
+        }
+        section[style*="padding: 120px 7%"] {
+          padding: 65px 4% !important;
+        }
+
+        /* Hero logo */
+        .hero-content > div > img {
+          height: 70px !important;
+          width: 70px !important;
+        }
+
+        /* patrocinio tiers */
+        div[style*="padding: 40px 30px"][style*="text-align: center"] {
+          padding: 25px 15px !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="cursor" id="cursor"></div>
@@ -44,6 +143,11 @@
         <li><a href="ingenieria.html" data-text="INGENIERÍA">INGENIERÍA</a></li>
         <li><a href="patrocinio.html" data-text="PATROCINIO">PATROCINIO</a></li>
       </ul>
+
+      <div class="nav-overlay" id="navOverlay"></div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
 
     <!-- PAGE HEADER -->

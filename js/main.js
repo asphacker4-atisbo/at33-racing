@@ -310,3 +310,40 @@ function setDonation(amount, tier) {
   ctaBtn.href = `mailto:at33stemracingteamoficial@gmail.com?subject=${subject}&body=${body}`;
   ctaBtn.textContent = `DONAR ${amount}€ AL EQUIPO`;
 }
+
+// ─── HAMBURGER NAV ────────────────────────
+const hamburger = document.getElementById("navHamburger");
+const navLinks = document.querySelector(".nav-links");
+const navOverlay = document.getElementById("navOverlay");
+
+if (hamburger && navLinks) {
+  function openMenu() {
+    hamburger.classList.add("open");
+    navLinks.classList.add("open");
+    if (navOverlay) navOverlay.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeMenu() {
+    hamburger.classList.remove("open");
+    navLinks.classList.remove("open");
+    if (navOverlay) navOverlay.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  hamburger.addEventListener("click", () => {
+    if (hamburger.classList.contains("open")) closeMenu();
+    else openMenu();
+  });
+
+  if (navOverlay) navOverlay.addEventListener("click", closeMenu);
+
+  // Close on nav link click
+  navLinks.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", closeMenu);
+  });
+
+  // Close on resize back to desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) closeMenu();
+  });
+}
